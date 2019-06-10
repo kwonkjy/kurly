@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Document</title>
+  <style>
+	#bak{
+	  width:800px;
+	  height:40px;
+	  display:flex;            /* #left, #right를 같은 라인에 */
+	  background:#542075;
+	  color:white;
+   	  margin:auto;
+	}
+	#bak #left{
+	  width:780px;
+  	  height:40px;
+	  display:flex;
+	  justify-content:center;  /*좌우정렬*/
+	  align-items:center;	  /*상하정렬*/
+	}
+	#bak #right{
+	  width:10px;
+  	  height:40px;
+ 	  display:flex;
+	  align-items:center;	
+	}
+	#join{
+	  width:800px;
+	  height:40px;
+	  font-size:12px;
+  	  margin:auto;
+	}
+	#join #left{
+	  width:390px;
+	  height:40px;
+	  float:left;     /*내부 id는 늘 부모 안에서의 왼.오 기준임*/
+	  display:flex;
+	  justify-content:flex-start;
+	  align-items:center;	
+	}
+	#join #left #bae{
+	  border:1px solid darkgray;
+	  border-radius:8px;
+	  padding:3px;
+	}
+	#join #left #bae b {
+	  color:#542075;
+	}
+	#join #right{
+  	  width:390px;
+	  height:40px;
+	  float:right;   
+	  display:flex;
+	  justify-content:flex-end;
+	  align-items:center;
+	}
+	#join #right span {
+	  display:inline-block;  /*span에 가로세로주기*/
+	  width:2px;
+	  height:10px;
+	  background:darkgray;
+	  margin-left:7px;
+	  margin-right:7px;
+	}
+	#logo{
+	  width:800px;
+	  height:100px;
+  	  margin:auto;
+	}
+	#menu{			 /*메뉴바 전체*/
+	  width:800px;
+	  height:50px;
+	  margin:auto;
+	}
+	#menu #cate{      /*메뉴바 세부 분할*/
+	  list-style-type:none;
+	  width:790px;
+	  height:50px;
+	}
+	#menu #cate li{    /*메뉴바 내용*/
+	  float:left;
+	  width:85px;
+	}
+    #menu #cate #aa{
+    width:180px;
+    height:30px;
+    border:1px solid #dddddd;
+    border-radius:15px;
+    display:flex;
+    align-items:center;   /*input 돋보기를 상하정렬(중앙)*/
+    background:#dddddd;
+    }
+	#menu #cate #aa #left{			/*input type 검색 서치바*/
+	float:left;   /* #aa 내 왼쪽, 오른쪽으로 배치한다. 선택자가 aa > left, right */
+	border:none;			/* input type 외곽선 숨김 */
+	margin-left:10px;     /*input type 입력커서 떨어뜨리기 : 외곽선부터 왼쪽으로*/
+	margin-right:-15px;
+	background:#dddddd;
+    }
+    #menu #cate #aa #right{    /*done(돋보기) 아이콘 구역*/
+    float:right;
+    }
+ 
+	#menu #cate li:first-child{   /*전체카테고리 칸 늘리기*/
+	  width:130px;
+	}
+	#menu #cate #aa #left li:nth-child(6){   /*검색바*/
+	  width:150px;
+	}
+	#menu #cate #aa #right li:nth-child(7){   /*돋보기*/
+	  width:20px;
+	}
+	#img{
+	  width:1000px;
+	  height:400px;
+	  margin:auto;
+	}
+	#sang{
+	  width:800px;
+	  height:400px;
+	  margin:auto;
+	}
+	#go{				/*7층 고객센터*/
+	  width:800px;
+	  height:400px;
+	  margin:auto;
+	}
+	#go #first{			/*7층 2-1칸*/
+	  width:800px;
+	  height:50px;
+	}
+	#go #second{
+	  width:800px;
+	  height:200px;
+	  display:flex;
+	}
+	#go #second #left{
+	  width:130px;
+	  height:200px;
+	}
+	#go #second #center{
+	  width:260px;
+	  height:200px;
+	  font-size:13px;
+	}
+	#go #second #right{
+	  width:500px;
+	  height:200px;
+	  font-size:12px;
+	}
+	#go #third{
+	  width:800px;
+	  height:50px;
+	  display:flex;
+	}
+	#go #third #left{
+	  width:390px;
+	  height:50px;
+	  font-size:10px;
+	}
+	#go #third #center{
+	  width:250px;
+	  height:50px;
+	}
+	#go #third #right{
+	  width:170px;
+	  height:50px;
+	}
+  </style>
+ </head>
+
+ <body>
+   <div id="bak">  <!--1층 상단보라바-->	
+	 <div id="left">지금 가입하고 인기상품 100원에 받아가세요! >  </div>
+	 <div id="right"> X </div>
+   </div>
+   <div id="join">  <!--2층 (좌)샛별배송 (우)회원가입-->	
+	 <div id="left"><span id="bae">서울·경기·인천 <b>샛별배송</b> ＞</span></div>
+	 <div id="right">
+	  회원가입 <span></span>
+	  로그인 <span></span>
+	  고객센터▼ <span></span>
+	  배송지역검색</div>
+   </div>
+   <div id="logo" align="center"><img src="logo.jpg"></div> <!--3층 로고-->	
+
+   <div id="menu">	<!--4층 메뉴바-->		
+     <ul id="cate">
+	  <li>전체 카테고리</li>
+	  <li>신상품</li>
+	  <li>베스트</li>
+	  <li>알뜰쇼핑</li>
+	  <li>이벤트</li>
+      <li style="border:none"> 
+	    <div id="aa">      <!--menu > cate > aa > left, right-->
+		     <input type="text" id="left">
+		     <div id="right"><span class="glyphicon glyphicon-search"></span></div> <!--돋보기아이콘-->
+		</div>
+	  </li>
+	  <li style="width:20px;border:none;margin-left:100px"><span class=material-icons> shopping_cart </span></li> <!--4층 메뉴 장바구니 아이콘-->
+	 </ul>
+   </div>
+   <!---- ~여기까지 헤더구역-->
+
+   <div id="img" align="center"><img src="banner.jpg"></div> <!--5층 배너-->
+
+   <div id="sang">											    <!--6층 상품4개-->
+     <table width="780" height="300" align="center">
+	 <caption><h2>이 상품 어때요? <!--표제목-->
+	  <tr>   <!--2행 4열-- tr 2개, td 4개-->
+	   <td><img src="1.jpg" width=190></td>
+	   <td><img src="2.jpg" width=190></td>
+	   <td><img src="3.jpg" width=190></td>
+	   <td><img src="4.jpg" width=193></td>
+	  </tr>
+	  <tr valing="top">
+	   <td>[신선한특가] GAP 오이<br>900원<br><s>1,590원</s></td>
+	   <td>[신선한특가][태우한우]<br>한우 1+ 양지(절단육)<br>9,900원<br></td>
+	   <td>[설성목장] 무항생제 양념 닭갈비<br>13,900원<br></td>
+	   <td>[CHAM] 노르웨이 고등어<br>5,590원</td>
+	  </tr>
+	 </table>
+   </div>
+
+   <?include "bottom.html"?>
+
+ </body>
+</html>
